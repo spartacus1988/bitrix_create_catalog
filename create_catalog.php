@@ -371,6 +371,24 @@ create_catalog_iblock();
          );
          create_property($arFields);
 
+         //=======================================//
+         // Добавляем Тип упаковки                //
+         //=======================================//
+         $arFields = Array(
+            "NAME" => "Тип упаковки",
+            "ACTIVE" => "Y",
+            "SORT" => 500,
+            "CODE" => "TIP_UPAKOVKI",
+            "PROPERTY_TYPE" => "L", // Список
+            "LIST_TYPE" => "C", // Тип списка - "флажки"
+            "FILTRABLE" => "Y", // Выводить на странице списка элементов поле для фильтрации по этому свойству
+            "VALUES" => array(
+               "VALUE" => "да",
+            ), 
+            "IBLOCK_ID" => $ID, 
+         );
+         create_property($arFields);
+
       }
       else
           echo "&mdash; Для данного инфоблока уже существуют свойства<br />";      
@@ -386,15 +404,19 @@ create_catalog_iblock();
 
       $obUserType = new CUserTypeEntity();
 
-      $fieldTitle = "Сео-заголовок (title)";
+
+      //=======================================//
+      // Добавляем UF_ARTICLE                  //
+      //=======================================//
+      $fieldTitle = "UF_ARTICLE ";
       $arPropFields = array(
          "ENTITY_ID" => "IBLOCK_".$ID."_SECTION",
-         "FIELD_NAME" => "UF_SEO_TITLE",
+         "FIELD_NAME" => "UF_ARTICLE ",
          "USER_TYPE_ID" => "string",
          "XML_ID" => "",
-         "SORT" => -777,
-         "MULTIPLE" => "N", // Множественное
-         "MANDATORY" => "N", // Обязательное 
+         "SORT" => 500,
+         "MULTIPLE" => "N",   // Множественное
+         "MANDATORY" => "N",  // Обязательное 
          "SHOW_FILTER" => "S",
          "SHOW_IN_LIST" => "Y",
          "EDIT_IN_LIST" => "Y",
@@ -408,6 +430,9 @@ create_catalog_iblock();
          "LIST_FILTER_LABEL" => array("ru" => $fieldTitle, "en" => ""),
       );
       $FIELD_ID = $obUserType->Add($arPropFields);
+
+
+
 
       $fieldTitle = "Ключевые слова (keywords)";
       $arPropFields = array(
@@ -456,8 +481,7 @@ create_catalog_iblock();
       $FIELD_ID = $obUserType->Add($arPropFields);
 
       
-      // Настройка формы редактирования товаров
-      // см. в блоге: http://dev.1c-bitrix.ru/community/webdev/user/16182/blog/8524/
+   
 
       
       // Подключаем инфоблок к модулю торгового каталога
