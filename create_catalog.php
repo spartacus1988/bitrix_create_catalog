@@ -424,7 +424,7 @@ create_catalog_iblock();
          "SETTINGS" => array(
                "SIZE" => "70", // длина поля ввода
                "ROWS" => "1" // высота поля ввода
-            ),
+          ),
          "EDIT_FORM_LABEL" => array("ru" => $fieldTitle, "en" => ""),
          "LIST_COLUMN_LABEL" => array("ru" => $fieldTitle, "en" => ""),
          "LIST_FILTER_LABEL" => array("ru" => $fieldTitle, "en" => ""),
@@ -432,15 +432,16 @@ create_catalog_iblock();
       $FIELD_ID = $obUserType->Add($arPropFields);
 
 
-
-
-      $fieldTitle = "Ключевые слова (keywords)";
+      //=======================================//
+      // Добавляем UF_BATTERYTYPE              //
+      //=======================================//
+      $fieldTitle = "UF_BATTERYTYPE";
       $arPropFields = array(
          "ENTITY_ID" => "IBLOCK_".$ID."_SECTION",
-         "FIELD_NAME" => "UF_SEO_KEYWORDS",
+         "FIELD_NAME" => "UF_BATTERYTYPE",
          "USER_TYPE_ID" => "string",
          "XML_ID" => "",
-         "SORT" => -777,
+         "SORT" => 500,
          "MULTIPLE" => "N", // Множественное
          "MANDATORY" => "N", // Обязательное 
          "SHOW_FILTER" => "S",
@@ -457,13 +458,19 @@ create_catalog_iblock();
       );
       $FIELD_ID = $obUserType->Add($arPropFields);
 
-      $fieldTitle = "Описание (description)";
+
+
+
+      //=======================================//
+      // Добавляем UF_DEVTYPE              	   //
+      //=======================================//
+      $fieldTitle = "UF_DEVTYPE";
       $arPropFields = array(
          "ENTITY_ID" => "IBLOCK_".$ID."_SECTION",
-         "FIELD_NAME" => "UF_SEO_DESCRIPTION",
+         "FIELD_NAME" => "UF_DEVTYPE",
          "USER_TYPE_ID" => "string",
          "XML_ID" => "",
-         "SORT" => -777,
+         "SORT" => 500,
          "MULTIPLE" => "N", // Множественное
          "MANDATORY" => "N", // Обязательное 
          "SHOW_FILTER" => "S",
@@ -480,8 +487,116 @@ create_catalog_iblock();
       );
       $FIELD_ID = $obUserType->Add($arPropFields);
 
+
+      //=======================================//
+      // Добавляем UF_MODEL              	   //
+      //=======================================//
+      $fieldTitle = "UF_MODEL";
+      $arPropFields = array(
+         "ENTITY_ID" => "IBLOCK_".$ID."_SECTION",
+         "FIELD_NAME" => "UF_MODEL",
+         "USER_TYPE_ID" => "string",
+         "XML_ID" => "",
+         "SORT" => 500,
+         "MULTIPLE" => "N", // Множественное
+         "MANDATORY" => "N", // Обязательное 
+         "SHOW_FILTER" => "S",
+         "SHOW_IN_LIST" => "Y",
+         "EDIT_IN_LIST" => "Y",
+         "IS_SEARCHABLE" => "N",
+         "SETTINGS" => array(
+               "SIZE" => "70", // длина поля ввода
+               "ROWS" => "3" // высота поля ввода
+            ),
+         "EDIT_FORM_LABEL" => array("ru" => $fieldTitle, "en" => ""),
+         "LIST_COLUMN_LABEL" => array("ru" => $fieldTitle, "en" => ""),
+         "LIST_FILTER_LABEL" => array("ru" => $fieldTitle, "en" => ""),
+      );
+      $FIELD_ID = $obUserType->Add($arPropFields);
       
+
+      //=======================================//
+      // Добавляем UF_PRDDATE              	   //
+      //=======================================//
+      $fieldTitle = "UF_PRDDATE";
+      $arPropFields = array(
+         "ENTITY_ID" => "IBLOCK_".$ID."_SECTION",
+         "FIELD_NAME" => "UF_PRDDATE",
+         "USER_TYPE_ID" => "string",
+         "XML_ID" => "",
+         "SORT" => 500,
+         "MULTIPLE" => "N", // Множественное
+         "MANDATORY" => "N", // Обязательное 
+         "SHOW_FILTER" => "S",
+         "SHOW_IN_LIST" => "Y",
+         "EDIT_IN_LIST" => "Y",
+         "IS_SEARCHABLE" => "N",
+         "SETTINGS" => array(
+               "SIZE" => "70", // длина поля ввода
+               "ROWS" => "3" // высота поля ввода
+            ),
+         "EDIT_FORM_LABEL" => array("ru" => $fieldTitle, "en" => ""),
+         "LIST_COLUMN_LABEL" => array("ru" => $fieldTitle, "en" => ""),
+         "LIST_FILTER_LABEL" => array("ru" => $fieldTitle, "en" => ""),
+      );
+      $FIELD_ID = $obUserType->Add($arPropFields);
+
+
+
+      //=======================================//
+      // Добавляем  UF_PRODUCER                //
+      //=======================================//
+      $fieldTitle = "UF_PRODUCER";
+      $arPropFields = array(
+         "ENTITY_ID" => "IBLOCK_".$ID."_SECTION",
+         "FIELD_NAME" => "UF_PRODUCER",
+         "USER_TYPE_ID" => "string",
+         "XML_ID" => "",
+         "SORT" => 500,
+         "MULTIPLE" => "N", // Множественное
+         "MANDATORY" => "N", // Обязательное 
+         "SHOW_FILTER" => "S",
+         "SHOW_IN_LIST" => "Y",
+         "EDIT_IN_LIST" => "Y",
+         "IS_SEARCHABLE" => "N",
+         "SETTINGS" => array(
+               "SIZE" => "70", // длина поля ввода
+               "ROWS" => "3" // высота поля ввода
+          ),
+         "EDIT_FORM_LABEL" => array("ru" => $fieldTitle, "en" => ""),
+         "LIST_COLUMN_LABEL" => array("ru" => $fieldTitle, "en" => ""),
+         "LIST_FILTER_LABEL" => array("ru" => $fieldTitle, "en" => ""),
+      );
+      $FIELD_ID = $obUserType->Add($arPropFields);
    
+
+      //=======================================//
+      // Добавляем  UF_COMPATIBILITYLIST       //
+      //=======================================//
+      $fieldTitle = "UF_COMPATIBILITYLIST";
+      $arPropFields = array(
+         "ENTITY_ID" => "IBLOCK_".$ID."_SECTION",
+         "FIELD_NAME" => "UF_COMPATIBILITYLIST",
+         "USER_TYPE_ID" => "string",
+         "XML_ID" => "",
+         "SORT" => 500,
+         "MULTIPLE" => "N", // Множественное
+         "MANDATORY" => "N", // Обязательное 
+         "SHOW_FILTER" => "S",
+         "SHOW_IN_LIST" => "Y",
+         "EDIT_IN_LIST" => "Y",
+         "IS_SEARCHABLE" => "N",
+         "SETTINGS" => array(
+               "SIZE" => "70", // длина поля ввода
+               "ROWS" => "3" // высота поля ввода
+          ),
+         "EDIT_FORM_LABEL" => array("ru" => $fieldTitle, "en" => ""),
+         "LIST_COLUMN_LABEL" => array("ru" => $fieldTitle, "en" => ""),
+         "LIST_FILTER_LABEL" => array("ru" => $fieldTitle, "en" => ""),
+      );
+      $FIELD_ID = $obUserType->Add($arPropFields);
+
+
 
       
       // Подключаем инфоблок к модулю торгового каталога
@@ -509,9 +624,8 @@ create_catalog_iblock();
       {
          echo "&mdash; Инфоблок №".$ID." является торговым каталогом<br />";
       }
-
-      // Возвращаем номер добавленного инфоблока
-      return $ID;
+      //Возвращаем номер добавленного инфоблока
+       return $ID;
    }
 ?>
 
