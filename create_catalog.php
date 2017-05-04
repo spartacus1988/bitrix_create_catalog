@@ -617,7 +617,7 @@ create_catalog_iblock();
          }
          else
          {
-            echo "&mdash; Инфоблок №".$ID." успешно подключен к модулю торгового каталога<br />";
+             echo "&mdash; Инфоблок №".$ID." успешно подключен к модулю торгового каталога<br />";
          }
       }   
       else
@@ -628,6 +628,9 @@ create_catalog_iblock();
        return $ID;
    }
 ?>
+
+
+
 
 
 
